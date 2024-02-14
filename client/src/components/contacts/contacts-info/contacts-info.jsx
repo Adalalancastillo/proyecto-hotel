@@ -37,13 +37,16 @@ export const Contacts_info = () => {
           }}
         >
         <form action="https://formsubmit.co/luxuryhotel@yopmail.com" method="POST">
-          <label htmlFor="name" className={styles.description}>Name:</label><br></br>
-          <input type="text" className={styles.entradas} id="name" placeholder="Enter your name" name="name"></input><br></br>
-          <label htmlFor="email" className={styles.description}>Email:</label><br></br>
-          <input type="email" className={styles.entradas} id="email" placeholder="Enter email" name="email"></input><br></br>
-          <label htmlFor="message" className={styles.description}>Message:</label><br></br>
-          <textarea  rows="5" className={styles.entradaTexto} id="message" name="message" placeholder="Write your message"></textarea><br></br>
-          <button type="submit">Send message</button>
+          <input type="hidden" name="_subject" value="Contacto"/>
+          <label for="name" class="form-label" className={styles.description}>Nombre:</label><br></br>
+          <input type="text" class="form-control" className={styles.entradas} id="name" placeholder="Ingrese su nombre" name="name" required></input><br></br>
+
+          <label for="email" class="form-label" className={styles.description}>Email:</label><br></br>
+          <input type="email" class="form-control" className={styles.entradas} id="email" placeholder="Ingrese su correo electronico" name="email" required></input><br></br>
+
+          <label for="message" class="form-label" className={styles.description}>Mensaje:</label><br></br>
+          <textarea class="form-control" rows="5" className={styles.entradaTexto} id="message" name="message" placeholder="Escriba su mensaje" required></textarea><br></br>
+          <button className="btn btn-info" type="submit">Enviar mensaje</button>
         </form>
         </div>
       </div>
